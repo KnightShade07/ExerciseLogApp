@@ -1,7 +1,18 @@
 package com.example.exerciselogapp;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "exercises")
 public class Exercise {
+    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @ColumnInfo(name = "exerciseID")
     private int exerciseID;
+
+    @ColumnInfo(name = "exerciseName")
     private String exerciseName;
     private int numberOfReps;
     private String timeSpent; //This variable is a string instead of an int because of time quantity.
