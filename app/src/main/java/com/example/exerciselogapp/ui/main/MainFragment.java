@@ -3,6 +3,8 @@ package com.example.exerciselogapp.ui.main;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,8 +19,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.exerciselogapp.Exercise;
+import com.example.exerciselogapp.MainActivity;
 import com.example.exerciselogapp.R;
 
 import java.util.List;
@@ -150,6 +154,7 @@ public class MainFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
     }
+
 
 
 }
