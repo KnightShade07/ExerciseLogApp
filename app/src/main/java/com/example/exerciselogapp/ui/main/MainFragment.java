@@ -66,6 +66,10 @@ public class MainFragment extends Fragment {
         recyclerSetup();
     }
 
+    /**
+     * clears all the text fields after user enters an exercise
+     * into the database
+     */
     private void clearFields() {
         exerciseID.setText("");
         exerciseName.setText("");
@@ -73,6 +77,11 @@ public class MainFragment extends Fragment {
         timeSpent.setText("");
         exerciseDay.setText("");
     }
+
+    /**
+     * sets up the OnCLickListeners for the add, find, and delete buttons
+     * in the application.
+     */
 
     private void listenerSetup(){
         Button addButton = getView().findViewById(R.id.addButton);
@@ -121,6 +130,9 @@ public class MainFragment extends Fragment {
         });
     }
 
+    /**
+     * modifies the exerciseList with user data.
+     */
     private void observerSetup() {
         mViewModel.getAllExercises().observe(getViewLifecycleOwner(), new Observer<List<Exercise>>() {
             @Override
@@ -148,6 +160,9 @@ public class MainFragment extends Fragment {
                 });
     }
 
+    /**
+     * sets up the recyclerView to be used in the application
+     */
     private void recyclerSetup() {
         RecyclerView recyclerView;
         adapter = new ExerciseListAdapter(R.layout.exercise_list_item);

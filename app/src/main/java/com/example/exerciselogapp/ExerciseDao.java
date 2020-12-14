@@ -8,6 +8,9 @@ import androidx.room.Query;
 import java.util.List;
 
 @Dao
+/**
+ *  Class where database commands are created.
+ */
 public interface ExerciseDao {
     @Insert
     void insertExercise(Exercise exercise);

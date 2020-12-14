@@ -15,6 +15,11 @@ public class ExerciseRepository {
 
     private ExerciseDao exerciseDao;
 
+    /**
+     * Class responsible for handling all database actions.
+     * @param application
+     */
+
     public ExerciseRepository(Application application){
         ExerciseRoomDatabase db;
         db = ExerciseRoomDatabase.getDatabase(application);

@@ -5,7 +5,11 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+
 @Entity(tableName = "exercises")
+/**
+ * class responsible for handling Exercise data.
+ */
 public class Exercise {
     @PrimaryKey(autoGenerate = true)
     @NonNull

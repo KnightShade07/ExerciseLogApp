@@ -24,12 +24,17 @@ public class MainActivity extends AppCompatActivity {
                     .commitNow();
         }
 
-        recyclerView = findViewById(R.id.exercise_recycler);
+        //recyclerView = findViewById(R.id.exercise_recycler);
+        /**The book, in chapter 49, tells us to have this setup code in OnCreate,
+           but why do we need to do it here when the recyclerSetup() method in the
+           MainFragment.java class basically does the same thing?
+         **/
 
-        layoutManager = new LinearLayoutManager(this);
+        /**layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         adapter = new ExerciseListAdapter();
         recyclerView.setAdapter(adapter);
+         **/
 
 
     }
