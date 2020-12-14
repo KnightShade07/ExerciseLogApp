@@ -11,6 +11,11 @@ public abstract class ExerciseRoomDatabase extends RoomDatabase {
     public abstract ExerciseDao exerciseDao();
     private static ExerciseRoomDatabase INSTANCE;
 
+    /**
+     * Creates a single instance of the database
+     * @param context
+     * @return INSTANCE the instance of the database
+     */
     static ExerciseRoomDatabase getDatabase(final Context context){
         if (INSTANCE == null){
             synchronized (ExerciseRoomDatabase.class) {
